@@ -1,5 +1,9 @@
+import java.util.Date;
+
 /**
- *
+ * Basic class for water crafts
+ * @author Claudia Emmy Reiff
+ * @version 1.0
  */
 public abstract class Watercraft {
     /**
@@ -20,7 +24,7 @@ public abstract class Watercraft {
     /**
      * Last service date for watercraft
      */
-    private DateTime lastServiced;
+    private Date lastServiced;
 
     /**
      * Price of watercraft
@@ -36,6 +40,6 @@ public abstract class Watercraft {
      * Does watercraft need service
      */
     public boolean needsService() {
-        return false;
+        return true;
     }
 }

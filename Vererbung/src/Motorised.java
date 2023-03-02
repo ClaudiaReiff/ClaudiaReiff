@@ -1,6 +1,9 @@
 /**
- *
+ * Basic class for motorised water crafts
+ * @author Claudia Emmy Reiff
+ * @version 1.0
  */
+
 public abstract class Motorised extends Watercraft{
     /**
      * Default constructor
@@ -18,7 +21,7 @@ public abstract class Motorised extends Watercraft{
     private String power;
 
     /**
-     * Speed of motor boat
+     * Motorboat speed
      */
     private String speed;
 
