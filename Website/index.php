@@ -23,22 +23,22 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body style="margin: 10px">
+<body>
 
-  <header>
-    <nav class="navigation-bar">
-      <img class="logo" src="img/logo.png">
-      <div>
-        <ul>
-          <li><a href="contact.html">
-            <button class="button">Contact</button>
-          </a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+<form class="container">
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email" placeholder="Email" required>
 
-  <h1>Herzlich wilkommen!</h1>
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" placeholder="Password"
+         required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+
+  <input type="submit" name="submit" value="Login">
+</form>
+
+<div>
+  <a href="register.html">Already registered?</a>
+</div>
 
 </body>
 </html>
