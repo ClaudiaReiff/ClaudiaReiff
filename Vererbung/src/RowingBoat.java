@@ -3,7 +3,7 @@
  * @author Claudia Emmy Reiff
  * @version 1.0
  */
-public class RowingBoat extends NonMotorised{
+public class RowingBoat extends NonMotorised {
     /**
      * Default constructor
      */
@@ -51,5 +51,13 @@ public class RowingBoat extends NonMotorised{
     @Override
     public void drive() {
         System.out.println("Rowing boat drives!");
+    }
+
+    /**
+     * @return
+     */
+    @Override
+    public boolean windNeeded() {
+        return false;
     }
 }

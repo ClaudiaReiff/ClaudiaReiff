@@ -3,7 +3,7 @@
  * @author Claudia Emmy Reiff
  * @version 1.0
  */
-public class PedalBoat extends NonMotorised{
+public class PedalBoat extends NonMotorised {
     /**
      * Default constructor
      */
@@ -42,5 +42,13 @@ public class PedalBoat extends NonMotorised{
     @Override
     public void drive() {
         System.out.println("Liner drives!");
+    }
+
+    /**
+     * @return
+     */
+    @Override
+    public boolean windNeeded() {
+        return false;
     }
 }

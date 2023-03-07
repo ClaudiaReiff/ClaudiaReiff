@@ -3,7 +3,7 @@
  * @author Claudia Emmy Reiff
  * @version 1.0
  */
-public class MotorBoat extends Motorised{
+public class MotorBoat extends Motorised {
     /**
      * Default constructor
      */
@@ -41,5 +41,13 @@ public class MotorBoat extends Motorised{
     @Override
     public void drive() {
         System.out.println("Motorboat drives!");
+    }
+
+    /**
+     * @param litres
+     */
+    @Override
+    public void refuelBoat(int litres) {
+
     }
 }

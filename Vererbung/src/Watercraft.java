@@ -42,4 +42,12 @@ public abstract class Watercraft {
     public boolean needsService() {
         return true;
     }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
