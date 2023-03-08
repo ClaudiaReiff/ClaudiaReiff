@@ -1,5 +1,3 @@
-package Interfaces;
-
 /**
  * Interface for non-motorised water crafts
  *  @author Claudia Emmy Reiff

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  * Program starting point
@@ -8,10 +9,16 @@ import java.util.Scanner;
  * @version 1.0
 */
 public class Main {
+    public static void main(String[] args) {
+        insureBoats();
+    }
 
-    public static void buyBoat(){
-        int selection;
-        double price = 0.0;
+    /**
+     * Set insurance for boats
+     */
+    public static void insureBoats(){
+        int boatSelection;
+        double insurancePrice = 0.0;
 
         List<Watercraft> insuredBoats = new ArrayList<Watercraft>();
         Scanner input = new Scanner(System.in);
@@ -21,34 +28,50 @@ public class Main {
             System.out.println("1-Motor boat");
             System.out.println("2-Rowing boat");
             System.out.println("3-None");
-            selection = input.nextInt();
 
-            if(selection == 1 || selection == 2){
+            boatSelection = input.nextInt();
+
+            if(boatSelection == 1 || boatSelection == 2){
                 System.out.println("What does your boat cost?");
-                price = input.nextDouble();
+                insurancePrice = input.nextDouble();
             }
 
-            switch (selection){
+            switch (boatSelection){
                 case 1:
                     MotorBoat motorBoat = new MotorBoat();
-                    motorBoat.setPrice(price);
+                    motorBoat.setPrice(insurancePrice);
                     insuredBoats.add(motorBoat);
                     break;
                 case 2:
                     RowingBoat rowingBoat = new RowingBoat();
-                    rowingBoat.setPrice(price);
+                    rowingBoat.setPrice(insurancePrice);
                     insuredBoats.add(rowingBoat);
                     break;
-                case 3:break;
+                case 3:
+                    break;
                 default:
+                    System.out.println("Invalid choice given.");
             }
 
-        } while(selection == 1 || selection ==2);
+        } while(boatSelection == 1 || boatSelection ==2);
 
         System.out.println("Number of boats to be insured: " +insuredBoats.toArray().length);
+        removeInsurance(insuredBoats);
     }
 
-    public static void main(String[] args) {
-        buyBoat();
+    public static void removeInsurance(List<Watercraft> insured){
+        double insurancePrice;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("What did the insured boat cost that you want to remove?");
+        insurancePrice = input.nextDouble();
+
+        insured.forEach(el -> {
+            if(el.getPrice() == insurancePrice){
+                insured.remove(el);
+            }
+        });
+
+        System.out.println("Number of boats to be insured: " + insured.toArray().length);
     }
 }

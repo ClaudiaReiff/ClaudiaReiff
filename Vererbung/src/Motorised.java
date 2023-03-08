@@ -1,5 +1,3 @@
-import Interfaces.IMotorised;
-
 /**
  * Basic class for motorised water crafts
  * @author Claudia Emmy Reiff

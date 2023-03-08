@@ -1,5 +1,3 @@
-import Interfaces.INonMotorised;
-
 /**
  * Basic class for non-motorised water crafts
  *  @author Claudia Emmy Reiff
