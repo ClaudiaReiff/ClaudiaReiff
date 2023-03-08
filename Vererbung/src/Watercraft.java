@@ -27,9 +27,9 @@ public abstract class Watercraft {
     private Date lastServiced;
 
     /**
-     * Price of watercraft
+     * Name of the watercraft
      */
-    private double price;
+    private String name;
 
     /**
      * Drive behaviour of watercraft
@@ -43,11 +43,11 @@ public abstract class Watercraft {
         return true;
     }
 
-    public double getPrice() {
-        return price;
+    public String getName() {
+        return name;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setName(String name) {
+        this.name = name;
     }
 }

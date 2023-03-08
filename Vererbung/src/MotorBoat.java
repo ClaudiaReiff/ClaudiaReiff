@@ -43,11 +43,7 @@ public class MotorBoat extends Motorised {
         System.out.println("Motorboat drives!");
     }
 
-    /**
-     * @param litres
-     */
     @Override
     public void refuelBoat(int litres) {
-
     }
 }

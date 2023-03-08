@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 /**
  * Program starting point
@@ -10,17 +10,36 @@ import java.util.stream.Collectors;
 */
 public class Main {
     public static void main(String[] args) {
-        insureBoats();
+
+        List<Watercraft> insuredBoats = new ArrayList<Watercraft>();
+        int selection;
+
+        Scanner input = new Scanner(System.in);
+
+        do{
+            System.out.println("What action would you like to perform?");
+            System.out.println("1-Add boat");
+            System.out.println("2-Remove boat");
+
+            selection = input.nextInt();
+
+            switch (selection) {
+                case 1 -> insuredBoats = setBoatInsurance(insuredBoats);
+                case 2 -> insuredBoats = removeInsurance(insuredBoats);
+                default -> System.out.println("Wrong selection!");
+            }
+        } while(selection == 1 || selection ==2);
+
+        System.out.println("Number of boats insured: " + insuredBoats.toArray().length);
     }
 
     /**
      * Set insurance for boats
      */
-    public static void insureBoats(){
+    public static List<Watercraft> setBoatInsurance(List<Watercraft> insuranceList){
         int boatSelection;
-        double insurancePrice = 0.0;
+        String boatName = "";
 
-        List<Watercraft> insuredBoats = new ArrayList<Watercraft>();
         Scanner input = new Scanner(System.in);
 
         do{
@@ -31,21 +50,21 @@ public class Main {
 
             boatSelection = input.nextInt();
 
-            if(boatSelection == 1 || boatSelection == 2){
-                System.out.println("What does your boat cost?");
-                insurancePrice = input.nextDouble();
+            if( boatSelection == 1 || boatSelection == 2){
+                System.out.println("What name does the boat have?");
+                boatName = input.toString();
             }
 
             switch (boatSelection){
                 case 1:
                     MotorBoat motorBoat = new MotorBoat();
-                    motorBoat.setPrice(insurancePrice);
-                    insuredBoats.add(motorBoat);
+                    motorBoat.setName(boatName);
+                    insuranceList.add(motorBoat);
                     break;
                 case 2:
                     RowingBoat rowingBoat = new RowingBoat();
-                    rowingBoat.setPrice(insurancePrice);
-                    insuredBoats.add(rowingBoat);
+                    rowingBoat.setName(boatName);
+                    insuranceList.add(rowingBoat);
                     break;
                 case 3:
                     break;
@@ -55,23 +74,22 @@ public class Main {
 
         } while(boatSelection == 1 || boatSelection ==2);
 
-        System.out.println("Number of boats to be insured: " +insuredBoats.toArray().length);
-        removeInsurance(insuredBoats);
+        input.close();
+        return  insuranceList;
     }
 
-    public static void removeInsurance(List<Watercraft> insured){
-        double insurancePrice;
+    /**
+     * Remove insured boats from list
+     */
+    public static List<Watercraft> removeInsurance(List<Watercraft> insuredBoats){
+        String boatName;
         Scanner input = new Scanner(System.in);
 
         System.out.println("What did the insured boat cost that you want to remove?");
-        insurancePrice = input.nextDouble();
+        boatName = input.toString();
 
-        insured.forEach(el -> {
-            if(el.getPrice() == insurancePrice){
-                insured.remove(el);
-            }
-        });
-
-        System.out.println("Number of boats to be insured: " + insured.toArray().length);
+        insuredBoats.removeIf(el -> Objects.equals(el.getName(), boatName));
+        input.close();
+        return insuredBoats;
     }
 }
