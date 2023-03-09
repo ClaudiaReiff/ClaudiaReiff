@@ -22,7 +22,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-
+  margin: 2px;
 }
 
 .container {
@@ -33,7 +33,8 @@
   padding: 20px;
 }
 
-input[type=text], select, textarea {
+input[type=text], input[type=password], input[type=date],
+input[type=tel], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -44,22 +45,22 @@ input[type=text], select, textarea {
   resize: vertical
 }
 
-input[type=password], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical
-}
-
-input[type=submit] {
+input[type=submit]{
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin: 2px;
+}
+
+input[type=reset]{
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 2px;
 }

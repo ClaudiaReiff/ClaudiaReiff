@@ -6,31 +6,85 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body style="margin: 10px">
+<body>
 
     <nav class="navigation-bar">
-      <a href="index.html">
+      <a href="index.php">
         <img class="logo" src="img/logo.png">
       </a>
     </nav>
 
-    <h1>Register here</h1>
+    <h1>Register</h1>
+
     <form class="container" action="register.php" method="post">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Name"
-             required minlength="2">
 
-      <label for="surname">Surname</label>
-      <input type="text" id="surname" name="surname" placeholder="Surname"
-             required minlength="2">
+      <fieldset>
+        <legend>Account</legend>
 
-      <label for="email">Email</label>
-      <input type="text" id="email" name="email" placeholder="Email" required>
+        <div>
+          <input type="radio" id="genderFemale" value="Female" name="gender" autofocus>
+          <label for="genderFemale">Female</label>
+          <input type="radio" id="genderMale" value="Male" name="gender">
+          <label for="genderMale">Male</label>
+        </div>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Passwort" required >
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
 
-      <input type="submit" name="submit" value="Register">
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" name="surname" placeholder="Surname" required>
+
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Address</legend>
+
+        <label for="street">Street</label>
+        <input type="text" id="street" name="street" placeholder="Street">
+
+        <label for="residence">Residence</label>
+        <input type="text" id="residence" name="residence" placeholder="Residence" required>
+
+        <label for="postalCode">Postal Code</label>
+        <input type="text" id="postalCode" name="postalCode" placeholder="Postal code">
+
+        <label for="region">Region</label>
+        <select name="region" id="region">
+          <option value="Burgenland">Burgenland</option>
+          <option value="Kärnten">Kärnten</option>
+          <option value="Niederösterreich">Niederösterreich</option>
+          <option value="Oberösterreich">Oberösterreich</option>
+          <option value="Salzburg">Salzburg</option>
+          <option value="Steiermark">Steiermark</option>
+          <option value="Tirol">Tirol</option>
+          <option value="Vorarlberg">Vorarlberg</option>
+          <option value="Wien">Wien</option>
+        </select>
+
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+               placeholder="Phone number">
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Profile picture</legend>
+        <input type="file" id="profilePic" name="profilePic">
+      </fieldset>
+
+      <div>
+        <input type="submit" name="submit" value="Submit">
+        <input type="reset" name="reset" value="Reset">
+      </div>
+
     </form>
 
 </body>
