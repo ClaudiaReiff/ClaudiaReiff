@@ -56,25 +56,25 @@
     </div>
     <div style="height: 100px; position: absolute; z-index: 1;top: 550px;width: 100%;display: flex;justify-content: center">
       <div style="width: 70%;background-color: white; height: 100px;border-radius: 30px">
-        <form>
+        <form method="get" action="availability.php">
           <div style="display: flex;margin:10px;justify-content: space-evenly;align-items: center">
 
             <div>
-              <label>Guests</label>
-              <select>
+              <label for="guestNr">Guests</label>
+              <select name="guestNr" id="guestNr">
                 <option>1</option>
                 <option>2</option>
               </select>
             </div>
 
             <div>
-              <label>Check-In</label>
-              <input type="date">
+              <label for="checkIn">Check-In</label>
+              <input type="date" id="checkIn" name="checkIn">
             </div>
 
             <div>
-              <label>Check-Out</label>
-              <input type="date">
+              <label for="checkOut">Check-Out</label>
+              <input type="date" id="checkOut" name="checkOut">
             </div>
 
             <div>

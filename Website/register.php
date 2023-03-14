@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
 
   session_start();
   $_SESSION['loggedin'] = true;
-  header("location:home.php");
+  header("location:home.html");
 }
 
 if(isset($_GET['logout']) && $_GET['logout']){

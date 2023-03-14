@@ -39,7 +39,7 @@
   if(isset($_POST['submit'])){
     session_start();
     $_SESSION['loggedin'] = true;
-    header("location:home.php");
+    header("location:home.html");
   }
   ?>
 
