@@ -34,8 +34,8 @@ body {
 .menu-item{
   margin-right: 30px;
   cursor: pointer;
-  color: white;
   font-size: 18px;
+  text-transform: uppercase;
 }
 
 .container {
