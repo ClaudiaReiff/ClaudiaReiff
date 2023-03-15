@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['submit'])){
+if(isset($_GET['guestNr'])){
 
   $guestNr = $_GET['guestNr'];
   $checkIn = $_GET['checkIn'];
@@ -16,13 +16,14 @@ if(isset($_POST['submit'])){
             WHERE id NOT IN (
                 SELECT appartment_id
                 FROM reservation
-                WHERE check_in <= $checkIn AND check_out >= $checkOut);";
+                WHERE check_in <= '$checkIn' AND check_out >= '$checkOut');";
 
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
       echo "Name: " . $row["name"] . "<br>";
+      include("available_cards.php");
     }
   } else {
     echo "Keine Wohnung verfügbar.";
