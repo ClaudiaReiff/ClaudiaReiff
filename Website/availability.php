@@ -8,7 +8,10 @@
 
   <div style="display: flex;width: 100%;height: 60px;align-items: center">
     <div style="flex: 1">
-      <h1>Holzlehen</h1>
+      <div style="display: flex;align-items: center;justify-content: start">
+        <img src="img/logo2.png" style="width: 80px;height: 80px">
+        <h2>Holzlehen</h2>
+      </div>
     </div>
     <div style="flex: 1">
       <div style="display: flex;justify-content: center;align-items: center">
@@ -27,19 +30,19 @@
   </div>
 
   <div style="display: flex;height: 350px">
-    <div style="background-image: url('img/background.png');width: 65%;height: 100%"></div>
+    <div style="background-image: url('img/background.png');width: 65%;height: 100%;border-radius: 4px"></div>
     <div style="width: 35%;height: 100%">
-      <div style="background-image: url('img/background.png');height: 50%;margin-left: 10px"></div>
+      <div style="background-image: url('img/background.png');height: 50%;margin-left: 10px;border-radius: 4px"></div>
       <div style="display: flex;height: 50%;margin-left: 10px">
-        <div style="background-image: url('img/background.png');width: 100%;margin-right: 10px;margin-top: 10px"></div>
-        <div style="background-image: url('img/background.png');width: 100%;margin-top: 10px"></div>
+        <div style="background-image: url('img/background.png');width: 100%;margin-right: 10px;margin-top: 10px;border-radius: 4px"></div>
+        <div style="background-image: url('img/background.png');width: 100%;margin-top: 10px;border-radius: 4px"></div>
       </div>
     </div>
   </div>
 
   <div style="display: flex;height: 50px">
     <div style="width: 50%">
-      <div style="font-size: 36px;font-weight: bold;color: black;margin-top: 20px">Ferienwohung Bergliebe</div>
+      <div style="font-size: 36px;font-weight: bold;color: black;margin-top: 20px">Ferienwohnung Bergliebe</div>
 
       <p>
         Welcome to our beautiful holiday apartment available for rent! Located in a prime location, our apartment is the perfect choice for anyone looking for a comfortable and convenient place to stay during their vacation.
