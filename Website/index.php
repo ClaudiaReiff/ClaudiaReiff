@@ -1,47 +1,77 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Login</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/overrides.css">
+  <meta charset="UTF-8">
+  <title>Home</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/overrides.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body style="margin: 10px">
+<body>
+<div style="position: relative; height: 700px">
+  <div style="background-image: url('img/background.png');background-size: cover; height: 600px">
 
-  <nav class="navigation-bar">
-    <img class="logo" src="img/logo.png">
-  </nav>
+    <div style="height: 15%;padding-right: 40px;padding-left: 40px">
+      <header>
+        <?php include('menu.php')?>
+      </header>
+    </div>
+    <div style="height: 85%;display:flex;justify-content: center;align-items: center">
+      <p style="font-size: 36px;font-weight: bold;color: white;text-align: center">
+        Vacation on the farm<br>
+        Where happiness and freedom are at home
+      </p>
+    </div>
 
-  <h1>Login</h1>
-
-  <form class="container" method="post">
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email" placeholder="Email" required>
-
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Password" required>
-
-    <input type="submit" name="submit" value="Login">
-  </form>
-
-  <div style="margin-top: 10px">
-    <a href="register.html">Register Here</a>
   </div>
+  <div style="height: 100px; position: absolute; z-index: 1;top: 550px;width: 100%;display: flex;justify-content: center">
+    <div style="width: 70%;background-color: white; height: 100px">
+      <form method="get" action="availability.php">
+        <div style="display: flex;margin:10px;justify-content: space-evenly;align-items: center">
 
-  <?php
-  if(isset($_POST['submit'])){
-    session_start();
-    $_SESSION['loggedin'] = true;
-    header("location:home.html");
-  }
-  ?>
+          <div>
+            <label for="guestNr">Guests</label>
+            <select name="guestNr" id="guestNr">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="petNr">Pets</label>
+            <select name="petNr" id="petNr">
+              <option>1</option>
+              <option>2</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="checkIn">Check-In</label>
+            <input type="date" id="checkIn" name="checkIn">
+          </div>
+
+          <div>
+            <label for="checkOut">Check-Out</label>
+            <input type="date" id="checkOut" name="checkOut">
+          </div>
+
+          <div>
+            <input type="submit" value="Availability">
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
