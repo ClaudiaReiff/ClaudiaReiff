@@ -12,9 +12,9 @@
   <div style="flex: 1">
     <div style="display: flex;justify-content: center;align-items: center">
       <ul>
-        <li class="menu-item" style="color: white"><a style="text-decoration: none;color: white" href="apartment1.php">Apartments</a></li>
-        <li class="menu-item" style="color: white">Activities</li>
-        <li class="menu-item" style="color: white">About Us</li>
+        <li class="menu-item" style="color: black"><a style="text-decoration: none;color: black" href="apartment1.php">Apartments</a></li>
+        <li class="menu-item" style="color: black">Activities</li>
+        <li class="menu-item" style="color: black">About Us</li>
       </ul>
     </div>
   </div>
