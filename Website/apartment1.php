@@ -27,7 +27,7 @@ $appartment = $statement->fetch();
 
   <div style="display: flex;height: 50px">
     <div style="width: 50%">
-      <div style="font-size: 36px;font-weight: bold;color: black;margin-top: 20px">Ferienwohnung <?php echo $appartment["name"];?></div>
+      <div style="font-size: 36px;font-weight: bold;color: black;margin-top: 20px">Ferienwohnung<?php echo $appartment["name"];?></div>
 
       <p>
         Welcome to our beautiful holiday apartment available for rent! Located in a prime location, our apartment is the perfect choice for anyone looking for a comfortable and convenient place to stay during their vacation.
