@@ -2,11 +2,12 @@
 <link rel="stylesheet" href="css/overrides.css">
 <link rel="stylesheet" href="css/main.css">
 
-<div style="display: flex;width: 100%;height: 80px;align-items: center">
+<div style="display: flex;width: 100%;height: 70px;align-items: center;
+background-color: white;box-shadow: inset 0px -1px 0px #f3f3f4;">
   <div style="flex: 1">
-    <div style="display: flex;align-items: center;justify-content: start">
+    <div style="display: flex;align-items: center;justify-content: start;margin-left: 20px">
       <img src="img/logo2-removebg.png" style="width: 80px;height: 80px">
-      <h2>Holzlehen</h2>
+      <div style="font-size: 20px">Holzlehen</div>
     </div>
   </div>
   <div style="flex: 1">
@@ -19,7 +20,7 @@
     </div>
   </div>
   <div style="flex: 1">
-    <div style="display: flex;justify-content: end;align-items: end">
+    <div style="display: flex;justify-content: end;align-items: end;margin-right: 20px">
       <button class="button">Contact Us</button>
     </div>
   </div>

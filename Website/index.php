@@ -6,15 +6,17 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/overrides.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 
-<body>
-<div style="position: relative; height: 700px">
+<body style="background-color: #F8F8F8">
+<div style="position: relative; height: 700px;">
   <div style="background-image: url('img/background.png');background-size: cover; height: 600px">
 
-    <div style="height: 15%;padding-right: 40px;padding-left: 40px">
+    <div>
       <header>
-        <?php include('menu.php')?>
+        <?php include('components/menu.php')?>
       </header>
     </div>
     <div style="height: 85%;display:flex;justify-content: center;align-items: center">
@@ -25,50 +27,9 @@
     </div>
 
   </div>
-  <div style="height: 100px; position: absolute; z-index: 1;top: 550px;width: 100%;display: flex;justify-content: center">
-    <div style="width: 70%;background-color: white; height: 100px">
-      <form method="get" action="availability.php">
-        <div style="display: flex;margin:10px;justify-content: space-evenly;align-items: center">
-
-          <div>
-            <label for="guestNr">Guests</label>
-            <select name="guestNr" id="guestNr">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="petNr">Pets</label>
-            <select name="petNr" id="petNr">
-              <option>1</option>
-              <option>2</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="checkIn">Check-In</label>
-            <input type="date" id="checkIn" name="checkIn">
-          </div>
-
-          <div>
-            <label for="checkOut">Check-Out</label>
-            <input type="date" id="checkOut" name="checkOut">
-          </div>
-
-          <div>
-            <input type="submit" value="Availability">
-          </div>
-        </div>
-      </form>
-
+  <div style="height: 80px; position: absolute; z-index: 1;top: 560px;width: 100%;display: flex;justify-content: center">
+    <div class="cookie-card" style="width: 55%">
+      <?php include ('components/availability.php')?>
     </div>
   </div>
 </div>
