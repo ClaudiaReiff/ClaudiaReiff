@@ -2,13 +2,14 @@
 <link rel="stylesheet" href="css/overrides.css">
 <link rel="stylesheet" href="css/main.css">
 
-<div style="display: flex;width: 100%;height: 70px;align-items: center;
-background-color: white;box-shadow: inset 0px -1px 0px #f3f3f4;">
+<div style="display: flex;width: 100%;height: 70px;align-items: center; background-color: white;box-shadow: inset 0px -1px 0px #f3f3f4;">
   <div style="flex: 1">
-    <div style="display: flex;align-items: center;justify-content: start;margin-left: 20px">
-      <img src="img/logo2-removebg.png" style="width: 80px;height: 80px">
-      <div style="font-size: 20px">Holzlehen</div>
-    </div>
+    <a href="index.php" style="text-decoration: none;color: black">
+      <div style="display: flex;align-items: center;justify-content: start;margin-left: 20px;cursor: pointer">
+        <img src="img/logo2-removebg.png" style="width: 80px;height: 80px">
+        <div style="font-size: 20px">Holzlehen</div>
+      </div>
+    </a>
   </div>
   <div style="flex: 1">
     <div style="display: flex;justify-content: center;align-items: center">

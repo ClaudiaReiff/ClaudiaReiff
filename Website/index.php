@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/cards.css">
   <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/layout.css">
 </head>
 
 <body style="background-color: #F8F8F8">
-<div style="position: relative; height: 700px;">
+  <div style="position: relative; height: 700px;">
   <div style="background-image: url('img/background.png');background-size: cover; height: 600px">
 
     <div>
@@ -33,6 +34,5 @@
     </div>
   </div>
 </div>
-
 </body>
 </html>

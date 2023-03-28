@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/cards.css">
   <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/layout.css">
 </head>
 
 <?php include('components/menu.php');?>
 <body style="background-color: #F8F8F8">
 
-
-<div style="padding-right: 40px;padding-left: 40px;margin-top: 20px">
+<div class="page-layout">
   <div style="display: flex;height: 350px">
     <div style="background-image: url('img/background.png');width: 65%;height: 100%;border-radius: 10px"></div>
     <div style="width: 35%;height: 100%">

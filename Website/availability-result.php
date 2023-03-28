@@ -35,6 +35,7 @@ if(isset($_GET['guestNr'])){
   <link rel="stylesheet" href="css/overrides.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/layout.css">
 </head>
 
 <?php include('components/menu.php');?>
@@ -42,12 +43,22 @@ if(isset($_GET['guestNr'])){
 
   <div style="width: 100%;display: flex;flex-direction: row">
 
-    <div style="width: 75%;margin: 20px;padding-left: 10px">
-      <div style="font-size: 20px;margin-bottom: 10px">Apartments available</div>
+    <div class="page-layout" style="height: 400px">
+
+      <div style="font-size: 32px;display: flex;justify-content: center;font-weight: bold">Apartments available</div>
+      <div style="font-size: 18px;margin-bottom: 20px;display: flex;justify-content: center">
+        Find your perfect vacation rental dates with ease.</div>
+
+      <div style="height: 80px; width: 100%;display: flex;justify-content: center;margin-bottom: 40px">
+        <div class="cookie-card" style="width: 65%">
+          <?php include ('components/availability.php')?>
+        </div>
+      </div>
+
       <?php if (!empty($apartments)) {
         foreach ($apartments as $apartment):?>
 
-          <div class="cookie-card" style="margin-bottom: 10px;height: 200px;">
+          <div class="cookie-card" style="margin-bottom: 20px;height: 200px;">
 
             <div style="display: flex;flex-direction: row">
               <div style="margin-top: 10px;margin-right: 20px" onclick="location.href='apartment1.php'">
@@ -68,7 +79,7 @@ if(isset($_GET['guestNr'])){
                 <p class="description"><?php echo($apartment['description']) ;?></p>
                 <div class="actions">
                   <div>
-                    <button class="accept" onclick="location.href='booking.php'">Request</button>
+                    <button class="accept" onclick="location.href='booking-request.php'">Request</button>
                   </div>
                 </div>
               </div>

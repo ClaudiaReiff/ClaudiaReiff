@@ -1,3 +1,5 @@
+$green: #4CAF50;
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -21,7 +23,7 @@ body {
 .button {
   font-size: 15px;
   line-height: 1rem;
-  background-color: #4CAF50;
+  background-color: $green;
   font-weight: 500;
   border-radius: 0.5rem;
   color: #fff;
@@ -49,7 +51,7 @@ body {
 }
 
 input[type=text], input[type=password], input[type=date],
-input[type=tel], select, textarea {
+input[type=tel],select, textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -62,7 +64,7 @@ input[type=tel], select, textarea {
 input[type=submit]{
   font-size: 15px;
   line-height: 1rem;
-  background-color: #4CAF50;
+  background-color: $green;
   font-weight: 500;
   border-radius: 0.5rem;
   color: #fff;
