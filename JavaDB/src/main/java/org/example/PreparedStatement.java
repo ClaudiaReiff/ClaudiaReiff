@@ -1,7 +1,6 @@
 package org.example;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class PreparedStatement {
@@ -33,12 +32,11 @@ public class PreparedStatement {
     }
 
     //Execute prepared statement
-    public ResultSet executePreparedStatement() {
+    public void executePreparedStatement() {
         try {
-            return preparedStatement.executeQuery();
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-            return null;
         }
     }
 
