@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Appartment</title>
+  <title>Apartment</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/overrides.css">
   <link rel="stylesheet" href="css/main.css">

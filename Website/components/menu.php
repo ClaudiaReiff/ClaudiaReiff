@@ -22,7 +22,11 @@
   </div>
   <div style="flex: 1">
     <div style="display: flex;justify-content: end;align-items: end;margin-right: 20px">
-      <button class="button">Contact Us</button>
+      <div style="display: flex;align-items: center">
+        <div style="margin-right: 20px">
+          <a style="text-decoration: none;color: black" href="add-booking.php">Admin</a></div>
+        <button class="button">Contact Us</button>
+      </div>
     </div>
   </div>
 </div>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Request</title>
-  <link rel="stylesheet" href="css/style.scss">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/overrides.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/cards.css">
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/inputs.scss">
+  <link rel="stylesheet" href="css/inputs.css">
 </head>
 
 <?php include('components/menu.php');?>
@@ -33,12 +33,12 @@
 
                 <div>
                   <label for="checkIn">Check-In</label>
-                  <input style="width: 100%" type="date" id="checkIn" name="checkIn" required>
+                  <input style="width: 100%" type="date" id="checkIn" name="checkIn">
                 </div>
 
                 <div>
                   <label for="guestNr">Guests</label>
-                  <select style="width: 100%;" name="guestNr" id="guestNr" required>
+                  <select style="width: 100%;" name="guestNr" id="guestNr">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -56,12 +56,12 @@
               <div style="width: 50%">
                 <div>
                   <label for="checkOut">Check-Out</label>
-                  <input style="width: 100%" type="date" id="checkIn" name="checkOut" required>
+                  <input style="width: 100%" type="date" id="checkIn" name="checkOut">
                 </div>
 
                 <div>
                   <label for="petNr">Pets</label>
-                  <select style="width: 100%;" name="petNr" id="petNr" required>
+                  <select style="width: 100%;" name="petNr" id="petNr">
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -81,22 +81,22 @@
 
                 <div>
                   <label for="name">Name</label>
-                  <input style="width: 100%;" type="text" id="name" name="name" placeholder="Name" required>
+                  <input style="width: 100%;" type="text" id="name" name="name" placeholder="Name">
                 </div>
 
                 <div>
                   <label for="street">Street</label>
-                  <input style="width: 100%;" type="text" id="street" name="street" placeholder="Street" required>
+                  <input style="width: 100%;" type="text" id="street" name="street" placeholder="Street">
                 </div>
 
                 <div>
                   <label for="postalCode">Postal Code</label>
-                  <input style="width: 100%;" type="text" id="postalCode" name="postalCode" placeholder="Postal Code" required>
+                  <input style="width: 100%;" type="text" id="postalCode" name="postalCode" placeholder="Postal Code">
                 </div>
 
                 <div>
                   <label for="email">Email</label>
-                  <input style="width: 100%;" type="text" id="email" name="email" placeholder="Email" required>
+                  <input style="width: 100%;" type="text" id="email" name="email" placeholder="Email">
                 </div>
 
               </div>
@@ -104,22 +104,22 @@
 
                 <div>
                   <label for="surname">Surname</label>
-                  <input style="width: 100%;" type="text" id="surname" name="surname" placeholder="Surname" required>
+                  <input style="width: 100%;" type="text" id="surname" name="surname" placeholder="Surname">
                 </div>
 
                 <div>
                   <label for="city">City</label>
-                  <input style="width: 100%;" type="text" id="city" name="city" placeholder="City" required>
+                  <input style="width: 100%;" type="text" id="city" name="city" placeholder="City">
                 </div>
 
                 <div>
                   <label for="country">Country</label>
-                  <input style="width: 100%;" type="text" id="country" name="country" placeholder="Country" required>
+                  <input style="width: 100%;" type="text" id="country" name="country" placeholder="Country">
                 </div>
 
                 <div>
                   <label for="phone">Phone</label>
-                  <input style="width: 100%" type="tel" id="phone" name="phone" placeholder="Phone number" required>
+                  <input style="width: 100%" type="tel" id="phone" name="phone" placeholder="Phone number">
                 </div>
 
               </div>

@@ -13,8 +13,18 @@ if(isset($_POST['submit'])){
   $postalCode = $_POST['postalCode'];
   $country = $_POST['country'];
 
-  echo $checkIn,$checkOut;
-  echo $name,$surname;
+
+  $to_email = "root@localhost.com";
+  $subject = "Simple Email Test via PHP";
+  $body = "Hi,nn This is test email send by PHP Script";
+  $headers = "From: reiff.claudia@gmail.com";
+
+  if (mail($to_email, $subject, $body, $headers)) {
+    echo "Email successfully sent to $to_email...";
+  } else {
+    echo "Email sending failed...";
+  }
+
 }
 
 
