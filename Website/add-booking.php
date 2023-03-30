@@ -32,8 +32,8 @@
               <div style="width: 50%;margin-right: 10px">
 
                 <div>
-                  <label for="guestNr1">Guests</label>
-                  <select style="width: 100%;" name="guestNr" id="guestNr1">
+                  <label for="guestNr">Guests</label>
+                  <select style="width: 100%;" name="guestNr" id="guestNr">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -47,8 +47,8 @@
                 </div>
 
                 <div>
-                  <label for="checkIn1">Check-In</label>
-                  <input style="width: 100%" type="date" id="checkIn1" name="checkIn">
+                  <label for="checkIn">Check-In</label>
+                  <input style="width: 100%" type="date" id="checkIn" name="checkIn">
                 </div>
 
               </div>
@@ -56,16 +56,16 @@
               <div style="width: 50%">
 
                 <div>
-                  <label for="apartment1">Apartment</label>
-                  <select style="width: 100%;" name="apartment" id="apartment1">
+                  <label for="apartment">Apartment</label>
+                  <select style="width: 100%;" name="apartment" id="apartment">
                     <option>Waldrand</option>
                     <option>Bergliebe</option>
                   </select>
                 </div>
 
                 <div>
-                  <label for="checkOut1">Check-Out</label>
-                  <input style="width: 100%" type="date" id="checkOut1" name="checkOut">
+                  <label for="checkOut">Check-Out</label>
+                  <input style="width: 100%" type="date" id="checkOut" name="checkOut">
                 </div>
 
               </div>
@@ -73,58 +73,13 @@
           </fieldset>
         </div>
 
-        <div id="addBooking" class="cookie-card" style="margin-top: 20px;height: 26px;display: block;cursor: pointer"
-          onclick="showAddBooking()"> + Add Booking</div>
+        <div id="addBooking" class="cookie-card" style="margin-top: 20px;height: 26px;display: block;cursor: pointer"> + Add Booking</div>
 
         <div id="booking"  class="cookie-card" style="display:none;margin-top: 20px">
           <fieldset>
             <div style="display: flex;justify-content: space-between">
               <legend style="font-weight: bold;font-size: 18px;margin-bottom: 10px">&#128218 Booking 2</legend>
-              <div style="cursor: pointer" onclick="showAddBooking()">X</div>
-            </div>
-
-            <div style="display: flex;width: 100%">
-
-              <div style="width: 50%;margin-right: 10px">
-
-                <div>
-                  <label for="guestNr2">Guests</label>
-                  <select style="width: 100%;" name="guestNr" id="guestNr2">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="checkIn2">Check-In</label>
-                  <input style="width: 100%" type="date" id="checkIn2" name="checkIn">
-                </div>
-
-              </div>
-
-              <div style="width: 50%">
-
-                <div>
-                  <label for="apartment2">Apartment</label>
-                  <select style="width: 100%;" name="apartment" id="apartment2">
-                    <option>Waldrand</option>
-                    <option>Bergliebe</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="checkOut2">Check-Out</label>
-                  <input style="width: 100%" type="date" id="checkOut2" name="checkOut">
-                </div>
-
-              </div>
+              <div style="cursor: pointer">X</div>
             </div>
           </fieldset>
         </div>

@@ -71,7 +71,7 @@ if(isset($_GET['guestNr'])){
                     <div style="display: flex;margin-top: 8px">
                       <div style="margin-right: 10px"><?php echo($apartment['guest_nr']) ;?> Guest</div>
                       <div style="margin-right: 10px"><?php echo($apartment['bedroom_nr']) ;?> Bedroom</div>
-                      <div><?php echo($apartment['bedroom_nr']) ;?> Bathroom</div>
+                      <div><?php echo($apartment['bathroom_nr']) ;?> Bathroom</div>
                     </div>
                   </div>
                   <div style="font-weight: bold"><?php echo($apartment['price']) ;?>€ per night</div>
