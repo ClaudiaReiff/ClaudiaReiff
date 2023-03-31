@@ -48,7 +48,7 @@
 
                 <div>
                   <label for="checkIn">Check-In</label>
-                  <input style="width: 100%" type="date" id="checkIn" name="checkIn">
+                  <input style="width: 100%" type="date" id="checkIn" name="checkIn" required>
                 </div>
 
               </div>
@@ -58,14 +58,14 @@
                 <div>
                   <label for="apartment">Apartment</label>
                   <select style="width: 100%;" name="apartment" id="apartment">
-                    <option>Waldrand</option>
-                    <option>Bergliebe</option>
+                    <option value="1">Bergliebe</option>
+                    <option value="2">Waldrand</option>
                   </select>
                 </div>
 
                 <div>
                   <label for="checkOut">Check-Out</label>
-                  <input style="width: 100%" type="date" id="checkOut" name="checkOut">
+                  <input style="width: 100%" type="date" id="checkOut" name="checkOut" required>
                 </div>
 
               </div>

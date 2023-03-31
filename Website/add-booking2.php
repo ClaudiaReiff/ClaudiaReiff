@@ -20,18 +20,22 @@
     $pdo = $database->getConnection();
 
     $addressSql = "INSERT INTO address (street, city, postal_code, country) VALUES (?, ?, ?, ?);";
-    $guestSql = "INSERT INTO guest (email, name, surname, phone, address_id) VALUES (?, ?, ?, ?, @addressId);";
+
+    $guestSql ="INSERT INTO holzlehen.guest (email, name, surname, phone, address_id)
+        SELECT ?, ?, ?, ?, @addressId
+        FROM dual
+        WHERE NOT EXISTS (SELECT 1 FROM guest WHERE email = ?);";
 
     $bookingSql = "INSERT INTO booking (booking_date, check_in, check_out, guest_nr, guest_address_id, guest_email, apartment_id)
-        VALUES (CURDATE(), ?, ?, ?, @addressId, ?, 1);";
+        VALUES (CURDATE(), ?, ?, ?, @addressId, ?, ?);";
 
     $pdo->beginTransaction();
 
     $pdo->prepare($addressSql)->execute([$street, $city, $postalCode, $country]);
     $addressId = $pdo->lastInsertId();
 
-    $pdo->prepare(str_replace('@addressId', $addressId, $guestSql))->execute([$email, $name, $surname, $phone]);
-    $pdo->prepare(str_replace('@addressId', $addressId, $bookingSql))->execute([$checkIn, $checkOut, $guestNr, $email]);
+    $pdo->prepare(str_replace('@addressId', $addressId, $guestSql))->execute([$email, $name, $surname, $phone,$email]);
+    $pdo->prepare(str_replace('@addressId', $addressId, $bookingSql))->execute([$checkIn, $checkOut, $guestNr, $email,$apartment]);
 
     $pdo->commit();
   }
