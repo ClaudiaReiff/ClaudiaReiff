@@ -1,51 +1,47 @@
 package org.example;
-
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.DatagramPacket;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.Random;
 
 public class Server {
-    private static final int BUFSIZE = 508;
+    private static final int BUFSIZE = 5000;
 
     public static void main(String[] args) {
-        ArrayList<Quote> quotes = new ArrayList<>();
+        String path = "C:\\Users\\claudia.reiff\\IdeaProjects\\UDP-Server\\src\\main\\java\\org\\example\\quotes.txt";
 
-        try {
-            File file = new File("C:\\Users\\claudia.reiff\\IdeaProjects\\UDP-Server\\src\\main\\java\\org\\example\\quotes.txt");
-            Scanner scanner = new Scanner(file);
-
-            while (scanner.hasNext()){
-                String line = scanner.nextLine();
-                String[] quoteSplit = line.split("#");
-                String text = quoteSplit[0];
-                String author = quoteSplit[1];
-                Quote quote = new Quote(text,author);
-                quotes.add(quote);
-            }
-            scanner.close();
-        } catch (FileNotFoundException e){
-            System.out.println("File not found.");
-        }
+        QuoteReader reader = new QuoteReader();
+        ArrayList<Message> quotes = QuoteReader.readQuotes(path);
         System.out.println("Number of available quotes: " + quotes.toArray().length);
 
-        try(ServerSocket serverSocket = new ServerSocket(3000)){
-            Socket clientSocket = serverSocket.accept();
+        String host = "localhost";
+        int port = 50000;
+        Message message = null;
+        Serializer serializer = new Serializer();
 
-            String request = Arrays.toString(clientSocket.getInputStream().readAllBytes());
+        try (DatagramSocket socket = new DatagramSocket(port)) {
+            InetAddress address = InetAddress.getByName(host);
+            DatagramPacket packet = new DatagramPacket(new byte[BUFSIZE], BUFSIZE, address, port);
 
-            if(request.equals("SEND_QUOTE")){
-                System.out.println("Client request!");
+            while (true) {
+                //Receive
+                socket.receive(packet);
+                //String data = new String(packet.getData(), 0, packet.getLength());
+                //message = serializer.deserialize(data);
+
+                //Send
+                int rnd = new Random().nextInt(quotes.toArray().length);
+                String msg = serializer.serialize(quotes.get(rnd));
+                byte[] quoteData = msg.getBytes();
+                packet.setData(quoteData);
+                packet.setLength(quoteData.length);
+                System.out.println(packet);
+                socket.send(packet);
             }
-
-        } catch (IOException exception){
-            exception.printStackTrace();
+        } catch (IOException e) {
+            System.err.println(e);
         }
     }
 }
