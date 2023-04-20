@@ -24,6 +24,7 @@ public class Client {
             socket.send(packet);
 
             //Receive
+            packet = new DatagramPacket(new byte[BUFSIZE], BUFSIZE, address, port);
             socket.receive(packet);
             String packetData = new String(packet.getData(), 0, packet.getLength());
             receiveMsg = serializer.deserialize(packetData);

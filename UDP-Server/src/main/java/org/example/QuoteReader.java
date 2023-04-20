@@ -12,7 +12,7 @@ public class QuoteReader {
         ArrayList<Message> quotes = new ArrayList<>();
 
         try {
-            File file = new File("C:\\Users\\claudia.reiff\\IdeaProjects\\UDP-Server\\src\\main\\java\\org\\example\\quotes.txt");
+            File file = new File(path);
             Scanner scanner = new Scanner(file);
 
             while (scanner.hasNext()){
